@@ -58,6 +58,7 @@ a {
     --light: #f8faff;
     --shadow: rgb(0, 0, 0, 0.2);
     --purple: rgb(21, 21, 100);
+    --purple2: #4b4986;
     --yellow: #FDC93B;
 }
 
@@ -83,6 +84,7 @@ a {
     height: 100px;
     width: 100%;
     position: fixed;
+    z-index: 99;
     background-color: #fff;
 }
 
@@ -173,6 +175,10 @@ div.navbar {
 .buttons.row {
     padding: 20px;
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .hero-section button {
@@ -242,7 +248,7 @@ div.feature-cards {
  */
 
 /* Using Grid */
-div.feature-cards {
+div.features-cards {
     padding: 40px 20px;
     margin-top: 40px;
     display: grid;
@@ -275,5 +281,73 @@ div.feature-cards {
     font-weight: 400;
 }
 
-
 /* End of Features Section Styling */
+
+/* End of courses Section Styling */
+section.courses-section {
+    padding: 60px 20px;
+}
+
+/* Using Grid */
+div.courses-cards {
+    padding: 40px 20px;
+    margin-top: 40px;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 1.4rem;
+}
+
+.course-card {
+    border-radius: 0.8rem;
+    background-color: var(--light);
+    /* box-shadow: 4px 4px 8px var(--shadow); */
+    position: relative;
+}
+
+.course-cover-image {
+    max-width: 100%;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: var(--light); */
+    padding: 20px 10px;
+}
+
+.course-cost {
+    background-color: var(--purple2);
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+    bottom: 25%;
+    padding: 1rem;
+    min-width: 6rem;
+    min-height: 6rem;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-title h2 {
+    font-size: 1.4rem;
+}
+
+.course-ratings {
+    display: flex;
+    gap: 10px;
+}
+
+.course-ratings .ratings {
+    color: var(--yellow);
+}
+
+
+
+
+/* End of courses Section Styling */

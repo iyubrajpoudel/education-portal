@@ -55,6 +55,7 @@ a {
     --black: #000;
     --transparent: rgba(0, 0, 0, 0);
     --white: #ffffff;
+    --light: #f8faff;
     --shadow: rgb(0, 0, 0, 0.2);
     --purple: rgb(21, 21, 100);
     --yellow: #FDC93B;
@@ -66,6 +67,7 @@ a {
 
 .container {
     max-width: 1280px;
+    margin: 0 auto;
 }
 
 /* End of Custom global classes */
@@ -214,6 +216,64 @@ button#visitCoursesBtn:hover {
     background-color: var(--white);
 }
 
-
-
 /* End of Hero Section Styling */
+
+
+/* Features Section Styling */
+
+section.features-section {
+    padding: 60px 20px;
+}
+
+section .section-heading {
+    text-align: center;
+}
+
+/* Using Flexbox */
+/* 
+div.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+ */
+
+/* Using Grid */
+div.feature-cards {
+    padding: 40px 20px;
+    margin-top: 40px;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 1.4rem;
+}
+
+.feature-card {
+    background-color: var(--light);
+    padding: 30px 20px;
+    border-radius: 8px;
+    color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+
+.feature-card .icon {
+    font-size: 2.2rem;
+}
+
+.feature-title h3 {
+    font-size: 1.4rem;
+}
+
+.feature-description {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* End of Features Section Styling */

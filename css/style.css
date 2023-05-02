@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+/* Global Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 35)
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+span {
+    font-size: 0.9rem;
+    color: #757373;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* End of Global Styling */
+
+/* Global Color Variables*/
+:root {
+    --black: #000;
+    --transparent: rgba(0, 0, 0, 0);
+    --white: #ffffff;
+    --shadow: rgb(0, 0, 0, 0.2);
+    --purple: rgb(21, 21, 100);
+    --yellow: #FDC93B;
+}
+
+/* Global Color Variables*/
+
+/* Custom global classes */
+
+.container {
+    max-width: 1280px;
+}
+
+/* End of Custom global classes */
+
+
+
+/* Navbar Section Styling*/
+
+.navbar-wrapper {
+    /* box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2); */
+    box-shadow: 2px 2px 10px var(--shadow);
+    min-height: 10vh;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+}
+
+div.navbar {
+    display: flex;
+    /* flex-direction: row; */
+    gap: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-wrapper img {
+    max-width: 220px;
+}
+
+.nav-wrapper {
+    flex-grow: 1;
+}
+
+.header-nav ul.menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.header-nav .menu {
+    padding: 6px;
+}
+
+.header-nav .menu a {
+    text-decoration: none;
+    color: var(--purple);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.header-nav .menu a:hover {
+    /* color: #FDC93B; */
+    color: var(--yellow);
+}
+
+/* End of Navbar Styling */
+
+
+/* Hero Section Styling */
+
+.hero-section {
+    padding-top: 100px;
+    /* to adjust with fixed navbar*/
+    min-height: 90vh;
+    /* Overlay not working while giving separately*/
+    /* 
+    background-color: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7));
+     background-image: url("../assets/images/back.jpg"); 
+    */
+
+    background: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("../assets/images/back.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 60px 120px; */
+}
+
+.hero-section .row {
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.hero-section p {
+    /* color: #fff; */
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 2rem;
+}
+
+.buttons.row {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.hero-section button {
+    outline: none;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: .4s all ease-in-out;
+    cursor: pointer;
+}
+
+button#learnMoreBtn {
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+button#learnMoreBtn:hover {
+    color: rgb(21, 21, 100);
+    background-color: var(--white);
+}
+
+button#learnMoreBtn {
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+button#learnMoreBtn:hover {
+    color: rgb(21, 21, 100);
+    background-color: var(--white);
+}
+
+button#visitCoursesBtn {
+    color: var(--white);
+    background-color: var(--yellow);
+}
+
+button#visitCoursesBtn:hover {
+    color: var(--purple);
+    background-color: var(--white);
+}
+
+
+
+/* End of Hero Section Styling */

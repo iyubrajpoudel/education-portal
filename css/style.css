@@ -59,10 +59,14 @@ a {
     --light: #f8faff;
     --light2: #fafaf1;
     --shadow: rgb(0, 0, 0, 0.2);
-    --purple: rgb(21, 21, 100);
+    --purple1: rgb(21, 21, 100);
     --purple2: #4b4986;
+    --purple3: #101c32;
     --dark: #413c3c;
-    --yellow: #FDC93B;
+    --dark2: #354f6f;
+    --gray1: #7b838a;
+    --gray2: #5f7185;
+    --yellow1: #FDC93B;
 }
 
 /* Global Color Variables*/
@@ -122,14 +126,14 @@ div.navbar {
 
 .header-nav .menu a {
     text-decoration: none;
-    color: var(--purple);
+    color: var(--purple1);
     font-weight: 600;
     font-size: 1.2rem;
 }
 
 .header-nav .menu a:hover {
     /* color: #FDC93B; */
-    color: var(--yellow);
+    color: var(--yellow1);
 }
 
 /* End of Navbar Styling */
@@ -197,7 +201,7 @@ div.navbar {
 
 button#learnMoreBtn {
     color: var(--white);
-    background-color: var(--purple);
+    background-color: var(--purple1);
 }
 
 button#learnMoreBtn:hover {
@@ -207,7 +211,7 @@ button#learnMoreBtn:hover {
 
 button#learnMoreBtn {
     color: var(--white);
-    background-color: var(--purple);
+    background-color: var(--purple1);
 }
 
 button#learnMoreBtn:hover {
@@ -217,11 +221,11 @@ button#learnMoreBtn:hover {
 
 button#visitCoursesBtn {
     color: var(--white);
-    background-color: var(--yellow);
+    background-color: var(--yellow1);
 }
 
 button#visitCoursesBtn:hover {
-    color: var(--purple);
+    color: var(--purple1);
     background-color: var(--white);
 }
 
@@ -264,7 +268,7 @@ div.features-cards {
     background-color: var(--light);
     padding: 30px 20px;
     border-radius: 8px;
-    color: var(--purple);
+    color: var(--purple1);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -347,7 +351,7 @@ div.courses-cards {
 }
 
 .course-ratings .ratings {
-    color: var(--yellow);
+    color: var(--yellow1);
 }
 
 
@@ -462,16 +466,16 @@ form.register-form button {
     font-weight: 600;
     outline: none;
     border: none;
-    background-color: var(--yellow);
-    color: var(--purple);
+    background-color: var(--yellow1);
+    color: var(--purple1);
     border-radius: 6px;
     transition: 0.2s all ease-in-out;
     cursor: pointer;
 }
 
 form.register-form button:hover {
-    background-color: var(--purple);
-    /* color: var(--yellow); */
+    background-color: var(--purple1);
+    /* color: var(--yellow1); */
     color: var(--white);
 }
 
@@ -522,7 +526,7 @@ form.register-form button:hover {
 }
 
 #expertsSection .social-link {
-    border: 1px solid var(--purple);
+    border: 1px solid var(--purple1);
     padding: 0.4rem 0.8rem;
     cursor: pointer;
     font-size: 1.2rem;
@@ -531,9 +535,143 @@ form.register-form button:hover {
 }
 
 #expertsSection .social-link:hover {
-    background-color: var(--purple);
+    background-color: var(--purple1);
     color: var(--light2);
 }
 
 
 /* End of Experts Section Styling */
+
+/* Footer Styling */
+
+footer {
+    background-color: var(--purple3);
+    color: var(--white);
+}
+
+.footer-content {
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-content .upper-row {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 2.4rem;
+    padding: 1rem 0;
+}
+
+.footer-column-heading {
+    font-size: 1.4rem;
+}
+
+
+.footer-column .body {
+    margin-top: 1rem;
+    padding: 1rem 0.2rem;
+}
+
+.footer-links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+    color: var(--gray1);
+}
+
+.footer-column.col-e {
+    flex-grow: 1;
+}
+
+.footer-column.col-e .body {
+    /* font-size: 1.2rem; */
+    color: var(--gray1);
+    /* font-weight: 500; */
+}
+
+.footer-column.col-e .form-wrapper {
+    padding: 1rem 0.2rem;
+    /* margin: 1rem 0; */
+}
+
+#newsletterForm .row {
+    display: flex;
+}
+
+#newsletterForm input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    background-color: var(--dark2);
+    color: var(--light2);
+    font-family: inherit;
+    border-radius: 4px 0 0 4px;
+}
+
+#newsletterForm ::placeholder {
+    color: var(--gray1);
+}
+
+
+#newsletterForm button {
+    border: none;
+    outline: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: var(--yellow1);
+    border-radius: 0 4px 4px 0;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+}
+
+#newsletterForm button:hover {
+    background-color: orange;
+}
+
+.footer-content .lower-row {
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content .lower-row .social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: var(--light2); */
+}
+
+.footer-content .lower-row .social-link {
+    background-color: var(--gray1);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: 0.2s all ease-in-out;
+    /* backdrop-filter: blur(4px); */
+}
+
+.footer-social-links .social-link {
+    background-color: var(--gray1);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    /* backdrop-filter: blur(4px); */
+    cursor: pointer;
+}
+
+.footer-social-links .social-link:hover {
+    background-color: var(--yellow1);
+}
+
+
+/* End of Footer Styling */

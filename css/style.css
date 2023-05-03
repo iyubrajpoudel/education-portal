@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -62,6 +63,7 @@ a {
     --purple1: rgb(21, 21, 100);
     --purple2: #4b4986;
     --purple3: #101c32;
+    --purple4: rgba(17, 20, 104, 0.4);
     --dark: #413c3c;
     --dark2: #354f6f;
     --gray1: #7b838a;
@@ -80,9 +82,25 @@ a {
 
 /* End of Custom global classes */
 
-
-
 /* Navbar Section Styling*/
+
+.hamburger {
+    display: none;
+}
+
+.close-icon {
+    display: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#hamburgerBtn {
+    font-size: 2rem;
+}
+
+#hamburgerImage {
+    width: 2rem;
+}
 
 .navbar-wrapper {
     /* box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2); */
@@ -93,6 +111,7 @@ a {
     position: fixed;
     z-index: 99;
     background-color: #fff;
+    overflow: hidden;
 }
 
 div.navbar {
@@ -101,6 +120,7 @@ div.navbar {
     gap: 2rem;
     max-width: 1280px;
     margin: 0 auto;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
@@ -110,7 +130,7 @@ div.navbar {
 }
 
 .nav-wrapper {
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .header-nav ul.menu-list {
@@ -675,3 +695,69 @@ footer {
 
 
 /* End of Footer Styling */
+
+
+/* Responsive fixes using media query */
+
+/* Media Queries */
+
+@media screen and (max-width: 990px) {
+
+    .logo-wrapper img {
+        max-width: 160px;
+    }
+
+    .hamburger {
+        text-align: right;
+        display: block;
+        flex-grow: 1;
+    }
+
+    .close-icon {
+        display: block;
+    }
+
+    .navbar-wrapper {
+        overflow: initial;
+        position: relative;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        /* position: absolute; */
+        top: 0;
+        right: -100%;
+        width: 12rem;
+        height: 100vh;
+        background-color: var(--purple4);
+        color: var(--white);
+        backdrop-filter: blur(4px);
+        padding: 2rem;
+        transition: 0.4s all ease-in-out;
+    }
+
+    .nav-wrapper.active {
+        right: 0;
+    }
+
+    .header-nav ul.menu-list {
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .header-nav .menu a {
+        color: var(--white);
+    }
+
+    /* 
+    .navbar-wrapper {
+        min-height: initial;
+        height: auto;
+        padding: 1rem;
+    }
+    */
+
+}

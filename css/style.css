@@ -669,11 +669,6 @@ footer {
         display: block;
     }
 
-    .navbar-wrapper {
-        overflow: initial;
-        position: relative;
-    }
-
     .nav-wrapper {
         position: fixed;
         top: 0;

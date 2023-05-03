@@ -46,6 +46,7 @@ span {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 /* End of Global Styling */
@@ -56,6 +57,7 @@ a {
     --transparent: rgba(0, 0, 0, 0);
     --white: #ffffff;
     --light: #f8faff;
+    --light2: #fafaf1;
     --shadow: rgb(0, 0, 0, 0.2);
     --purple: rgb(21, 21, 100);
     --purple2: #4b4986;
@@ -474,7 +476,64 @@ form.register-form button:hover {
 }
 
 
-
-
-
 /* End of register Section Styling */
+
+
+/* Experts Section Styling */
+
+.experts-section-content {
+    padding: 4rem 2rem;
+}
+
+#expertsSection .profile-cards-wrapper {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#expertsSection .profile-cards {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 1.4rem;
+}
+
+#expertsSection .profile-card {
+    background-color: var(--light2);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* 
+#expertsSection .profile-card .details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+ */
+.details-wrapper .name {
+    font-size: 1.4rem;
+}
+
+#expertsSection .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#expertsSection .social-link {
+    border: 1px solid var(--purple);
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    /* font-weight: 800; */
+    transition: 0.2s all ease-in-out;
+}
+
+#expertsSection .social-link:hover {
+    background-color: var(--purple);
+    color: var(--light2);
+}
+
+
+/* End of Experts Section Styling */

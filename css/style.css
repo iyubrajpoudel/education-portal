@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 h1 {
@@ -302,7 +302,7 @@ div.features-cards {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 400px;
+    /* width: 400px; */
 }
 
 .feature-card .icon {
@@ -322,7 +322,7 @@ div.features-cards {
 
 /* End of courses Section Styling */
 section.courses-section {
-    padding: 60px 20px;
+    padding: 4rem 2rem;
 }
 
 /* Using Grid */
@@ -818,6 +818,7 @@ footer {
 
     div.form-card {
         margin: initial;
+        width: 100%;
     }
 
 
@@ -848,13 +849,20 @@ footer {
     /* Features Styling */
 
     div.features-cards {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+        /* grid-template-columns: repeat(auto-fit, minmax(90%, 1fr)); */
+        grid-template-columns: repeat(1, 1fr);
         /* justify-items: center; */
     }
 
     div.courses-cards {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        padding: 0.4rem;
 
+    }
+
+    section.courses-section {
+        padding: 2rem 0.5rem;
     }
 
     section .section-heading {
@@ -878,6 +886,17 @@ footer {
         padding: 4rem 1rem;
     }
 
+    #expertsSection .profile-cards-wrapper {
+        padding: 0.2rem;
+    }
+
+    .footer-column.col-e .form-wrapper {
+        max-width: 90%;
+    }
+
+    .footer-column.col-e {
+        flex-grow: initial;
+    }
 
 }
 
@@ -896,10 +915,26 @@ footer {
     }
 
     .register-section-content .col-b {
-        min-width: 95%;
+        min-width: 100%;
         padding: 1rem 0.5rem;
     }
 
     /* Features Styling */
+
+    /* footer styling */
+    .footer-content .upper-row {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .footer-content .lower-row {
+        justify-content: center;
+    }
+
+    .footer-column-heading {
+        text-align: center;
+    }
+
 
 }

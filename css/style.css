@@ -276,17 +276,27 @@ div.feature-cards {
 
 /* Using Grid */
 div.features-cards {
-    padding: 40px 20px;
-    margin-top: 40px;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    grid-gap: 1.4rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fit, 1fr)); */
+    /* grid-template-columns: minmax(max-content, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, minmax(max-content, 1fr)); */
+    /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); */
+    /* grid-template-columns: repeat(3, 1fr)); */
+    /* grid-gap: 1.4rem; */
+    justify-items: center;
+    gap: 1.4rem;
 }
 
 .feature-card {
     background-color: var(--light);
-    padding: 30px 20px;
+    padding: 2.4rem 1.2rem;
     border-radius: 8px;
     color: var(--purple1);
     display: flex;
@@ -317,11 +327,13 @@ section.courses-section {
 
 /* Using Grid */
 div.courses-cards {
-    padding: 40px 20px;
-    margin-top: 40px;
+    padding: 2.2rem 1rem;
+    margin-top: 2rem;
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    justify-items: center;
     grid-gap: 1.4rem;
 }
 
@@ -389,6 +401,7 @@ section#registerSection {
 
 .register-section-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
     padding: 4rem 2rem;
@@ -398,7 +411,7 @@ section#registerSection {
 .register-section-content .col-a {
     /* flex-grow: 1; */
     width: 50%;
-    padding: 120px 20px;
+    padding: 8rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -703,6 +716,8 @@ footer {
 
 @media screen and (max-width: 990px) {
 
+    /* Header Styling */
+
     .logo-wrapper img {
         max-width: 160px;
     }
@@ -759,5 +774,132 @@ footer {
         padding: 1rem;
     }
     */
+
+    /* Header Styling */
+
+    /* Hero Styling */
+
+    .hero-section {
+        padding-top: 20px;
+    }
+
+    .hero-section p {
+        width: 100%;
+    }
+
+    /* Hero Styling */
+
+    /* Features Styling */
+
+    div.features-cards {
+        /* grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); */
+        justify-items: center;
+
+    }
+
+    /* Features Styling */
+
+    .register-section-content {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .register-section-content .col-a {
+        min-width: 80%;
+    }
+
+    .register-section-content .col-b {
+        min-width: 80%;
+    }
+
+    .register-heading h2 {
+        font-size: 2rem;
+    }
+
+    div.form-card {
+        margin: initial;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .course-cost {
+        font-size: 1rem;
+        padding: 0.4rem;
+        min-width: 5rem;
+        min-height: 5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-section p {
+        text-align: justify;
+        letter-spacing: initial;
+    }
+
+    .hero-section .row {
+        padding: 1rem 0.5rem;
+    }
+
+    /* Features Styling */
+
+    div.features-cards {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        /* justify-items: center; */
+    }
+
+    div.courses-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    }
+
+    section .section-heading {
+        font-size: 1.2rem;
+    }
+
+    /* Features Styling */
+
+    .register-section-content .col-a {
+        min-width: 90%;
+        padding: 2rem 1rem;
+    }
+
+    .register-section-content .col-b {
+        min-width: 90%;
+        padding: 1rem;
+
+    }
+
+    .register-section-content {
+        padding: 4rem 1rem;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    /* Features Styling */
+
+    div.features-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* grid-template-columns: repeat(1, 1fr); */
+
+    }
+
+    .register-section-content .col-a {
+        min-width: 95%;
+        padding: 1rem 0.5rem;
+    }
+
+    .register-section-content .col-b {
+        min-width: 95%;
+        padding: 1rem 0.5rem;
+    }
+
+    /* Features Styling */
 
 }
